@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import {
   BrowserRouter as Router,
   Route,
@@ -14,7 +14,6 @@ import HomePage from './Home';
 import AccountPage from './Account';
 
 import * as routes from '../constants/routes';
-import { firebase } from '../firebase';
 
 const App = () =>
   <Router>
