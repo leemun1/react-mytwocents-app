@@ -1,2 +1,19 @@
-body {
-  color: red; }
+*,
+*::after {
+  margin: 0;
+  padding: 0; }
+
+.App {
+  width: 45rem;
+  margin: 0 auto;
+  border: 1px solid red; }
+
+.Navigation {
+  background: #d6d6d6; }
+  .Navigation ul {
+    display: flex;
+    list-style: none; }
+    .Navigation ul li, .Navigation ul a {
+      color: red;
+      text-decoration: none;
+      margin-left: 10px; }

@@ -1,3 +1,26 @@
-body {
-  color:red;
+*,
+*::after {
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  width: 45rem;
+  margin: 0 auto;
+  border: 1px solid red;
+}
+
+.Navigation {
+  background: rgb(214, 214, 214);
+
+  ul {
+    display: flex;
+    list-style: none;
+
+    li, a {
+      color: red;
+      text-decoration: none;
+      margin-left: 10px;
+    }
+  }
 }

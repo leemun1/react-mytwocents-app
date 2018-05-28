@@ -5,7 +5,7 @@ import SignOutButton from './SignOut';
 import * as routes from '../constants/routes';
 
 const Navigation = ({ authUser }) =>
-  <div>
+  <div className="Navigation">
     {authUser
       ? <NavigationAuth user={authUser}/>
       : <NavigationNotAuth />
@@ -22,9 +22,9 @@ const NavigationAuth = ({user}) =>
 
 const NavigationNotAuth = () =>
   <ul>
-    <li>Hello, Anonymous</li>
     <li><Link to={routes.LANDING}>Landing</Link></li>
     <li><Link to={routes.SIGN_IN}>Sign In</Link></li>
+    <li>Hello, Anonymous</li>
   </ul>
 
 export default Navigation;

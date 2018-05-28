@@ -31,7 +31,7 @@ class App extends Component {
   render() {
     return (
       <Router>
-        <div>
+        <div className="App">
           <Navigation authUser={this.state.authUser} />
 
           <Route
