@@ -1,22 +1,23 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { compose } from 'recompose';
 
 import withPermission from './withPermission';
 import { db } from '../firebase';
 
 class HomePage extends Component {
-  state = {
-    users: null,
-  }
-
   componentDidMount() {
+    const { onSetUsers } = this.props;
+
     db.onceGetUsers().then(snapshot =>
-      this.setState({ users: snapshot.val() })
+      onSetUsers(snapshot.val())
     )
   }
 
   render() {
 
-    const {users} = this.state;
+    const { users } = this.props;
+
     console.log(users);
     return (
       <div className="Main">
@@ -39,7 +40,17 @@ const UserList = ({users}) =>
     )}
   </div>
 
+const mapStateToProps = (state) => ({
+  users: state.userState.users,
+});
+
+const mapDispatchToProps = (dispatch) => ({
+  onSetUsers: (users) => dispatch({ type: 'USERS_SET', users }),
+});
 
 const permission = (authUser) => !!authUser;
 
-export default withPermission(permission)(HomePage);
+export default compose(
+  withPermission(permission),
+  connect(mapStateToProps, mapDispatchToProps)
+)(HomePage);

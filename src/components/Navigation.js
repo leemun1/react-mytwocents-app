@@ -1,19 +1,19 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 
-import AuthUserContext from './AuthUserContext';
 import SignOutButton from './SignOut';
 import * as routes from '../constants/routes';
 
 const Navigation = ({ authUser }) =>
-  <AuthUserContext.Consumer>
-    {authUser => authUser
+  <div>
+    {authUser
       ? <NavigationAuth user={authUser} />
       : <NavigationNotAuth />
     }
-  </AuthUserContext.Consumer>
+  </div>
 
-const NavigationAuth = ({ user }) =>
+const NavigationAuth = () =>
   <div className="Navigation">
     <Link className="Navigation__item Navigation__item--brand" to={routes.LANDING}>
       <i className="fas fa-quote-left"></i> myTwoCents
@@ -33,18 +33,22 @@ const NavigationNotAuth = () =>
       <i className="fas fa-quote-left"></i> myTwoCents
     </Link>
     <div className="Navigation__item">Hello, Anonymous.</div>
-    <Link 
-      className="Navigation__item Navigation__item--action--signin" 
+    <Link
+      className="Navigation__item Navigation__item--action--signin"
       to={routes.SIGN_IN}
     >
       Sign In
     </Link>
-    <Link 
-      className="Navigation__item Navigation__item--action--signup" 
+    <Link
+      className="Navigation__item Navigation__item--action--signup"
       to={routes.SIGN_UP}
     >
       Sign Up
     </Link>
   </div>
 
-export default Navigation;
+const mapStateToProps = (state) => ({
+  authUser: state.sessionState.authUser,
+});
+
+export default connect(mapStateToProps)(Navigation);
