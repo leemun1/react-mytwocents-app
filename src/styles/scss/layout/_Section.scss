@@ -1,7 +1,16 @@
 .Section {
   display: flex;
+  min-height: 80vh;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   font-size: 1.5rem; 
   padding: 2rem;
+
+  &__description {
+    width: 35rem;
+    text-align: center;
+    margin: 1.6rem 0;
+    font-size: 1.8rem;
+  }
 }

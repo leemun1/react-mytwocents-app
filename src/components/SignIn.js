@@ -54,7 +54,6 @@ class SignInForm extends Component {
 
     return (
       <form className="Form" onSubmit={this.onSubmit}>
-        {error && <p className="Form__error">{error.message}</p>}
         <input
           className="Form__input"
           value={email}
@@ -69,6 +68,7 @@ class SignInForm extends Component {
           type="password"
           placeholder="Password"
         />
+        {error && <p className="Form__error">{error.message}</p>}
         <button className="Button Button--signin" disabled={isInvalid} type="submit">
           Sign In
         </button>

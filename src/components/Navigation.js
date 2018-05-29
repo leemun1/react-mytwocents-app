@@ -16,7 +16,7 @@ const Navigation = ({ authUser }) =>
 const NavigationAuth = ({ user }) =>
   <div className="Navigation">
     <Link className="Navigation__item Navigation__item--brand" to={routes.LANDING}>
-      <i class="fas fa-quote-left"></i> myTwoCents
+      <i className="fas fa-quote-left"></i> myTwoCents
     </Link>
     <Link className="Navigation__item" to={routes.HOME}>
       <div>Home</div>
@@ -30,7 +30,7 @@ const NavigationAuth = ({ user }) =>
 const NavigationNotAuth = () =>
   <div className="Navigation">
     <Link className="Navigation__item Navigation__item--brand" to={routes.LANDING}>
-      <i class="fas fa-quote-left"></i> myTwoCents
+      <i className="fas fa-quote-left"></i> myTwoCents
     </Link>
     <div className="Navigation__item">Hello, Anonymous.</div>
     <Link 

@@ -1,8 +1,13 @@
 import React from 'react';
 
+import withPermission from './withPermission';
+
 const HomePage = () =>
-  <div className="Section">
+  <div className="Main">
     <h1>HomePage</h1>
+    <p>The Home Page is accessible by every signed in user.</p>
   </div>
 
-export default HomePage;
+const permission = (authUser) => !!authUser;
+
+export default withPermission(permission)(HomePage);

@@ -3,20 +3,30 @@
   border-radius: 3px;
   background: none;
   cursor: pointer;
+  outline: none;
 }
 
 .Button--signin,
-.Button--signup {
+.Button--signup,
+.Button--passwordReset,
+.Button--passwordChange {
   @extend .Button;
   height: 4.5rem;
-  width: 10rem;
+  min-width: 10rem;
   font-size: 2rem;
   padding: 0.3rem 1rem;
   margin: 1.5rem 0;
   transition: all 0.3s ease;
 
+  &:not([disabled]):hover {
+    background: $matt-grey;
+    color: white;
+  }
+
   &:disabled {
     border-color: $faint-grey;
     color: $faint-grey;
+    cursor: default;
   }
+
 }

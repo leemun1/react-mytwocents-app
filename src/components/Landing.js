@@ -1,7 +1,7 @@
 import React from 'react';
 
 const LandingPage = () =>
-  <div className="Section">
+  <div className="Main">
     <h1>LandingPage</h1>
   </div>
 
