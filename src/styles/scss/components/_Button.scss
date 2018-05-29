@@ -4,14 +4,6 @@
   background: none;
   cursor: pointer;
   outline: none;
-}
-
-.Button--signin,
-.Button--signup,
-.Button--passwordReset,
-.Button--passwordChange,
-.Button--goback {
-  @extend .Button;
   height: 4.5rem;
   min-width: 10rem;
   font-size: 2rem;
@@ -29,5 +21,4 @@
     color: $faint-grey;
     cursor: default;
   }
-
 }

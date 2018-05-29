@@ -11,7 +11,7 @@ html {
   font-size: 62.5%; }
 
 .App {
-  max-width: 90rem;
+  max-width: 110rem;
   min-height: 98vh;
   margin: 0 auto; }
 
@@ -23,6 +23,10 @@ html {
   list-style: none;
   padding: 1rem; }
 
+.Navigation__greeting {
+  font-size: 2rem;
+  margin-right: 2rem; }
+
 .Navigation__item {
   color: #555;
   text-decoration: none;
@@ -32,6 +36,7 @@ html {
 .Navigation__item--brand {
   font-size: 3rem;
   font-weight: 700;
+  padding-bottom: 0.3rem;
   flex: 1; }
 
 .Navigation__item--action, .Navigation__item--action--signout, .Navigation__item--action--signin, .Navigation__item--action--signup {
@@ -56,7 +61,6 @@ html {
     border-bottom-right-radius: 3px; }
 
 .Content {
-  border: 1px dashed red;
   display: flex;
   min-height: 90vh;
   flex-direction: column;
@@ -95,6 +99,17 @@ html {
   font-size: 3rem;
   margin: 2rem 0; }
 
+.About__title {
+  font-size: 4.5rem;
+  margin-bottom: 2rem; }
+
+.About__description {
+  font-size: 2.5rem;
+  text-align: center;
+  line-height: 1.5;
+  width: 50%;
+  margin-bottom: 2rem; }
+
 .Form {
   display: flex;
   flex-direction: column;
@@ -120,40 +135,22 @@ html {
     font-size: 1.8rem;
     margin: 0.2rem 0; }
 
-.Button, .Button--signin,
-.Button--signup,
-.Button--passwordReset,
-.Button--passwordChange,
-.Button--goback {
+.Button {
   border: 1px solid #555;
   border-radius: 3px;
   background: none;
   cursor: pointer;
-  outline: none; }
-
-.Button--signin,
-.Button--signup,
-.Button--passwordReset,
-.Button--passwordChange,
-.Button--goback {
+  outline: none;
   height: 4.5rem;
   min-width: 10rem;
   font-size: 2rem;
   padding: 0.3rem 1rem;
   margin: 1.5rem 0;
   transition: all 0.3s ease; }
-  .Button--signin:not([disabled]):hover,
-  .Button--signup:not([disabled]):hover,
-  .Button--passwordReset:not([disabled]):hover,
-  .Button--passwordChange:not([disabled]):hover,
-  .Button--goback:not([disabled]):hover {
+  .Button:not([disabled]):hover {
     background: #555;
     color: white; }
-  .Button--signin:disabled,
-  .Button--signup:disabled,
-  .Button--passwordReset:disabled,
-  .Button--passwordChange:disabled,
-  .Button--goback:disabled {
+  .Button:disabled {
     border-color: #e4e4e4;
     color: #e4e4e4;
     cursor: default; }

@@ -12,6 +12,7 @@ import SignUpPage from './SignUp';
 import SignInPage from './SignIn';
 import PasswordForgetPage from './PasswordForget';
 import HomePage from './Home';
+import AboutPage from './About';
 import AccountPage from './Account';
 import NotFoundPage from './NotFound';
 
@@ -27,6 +28,7 @@ const App = () =>
           <Route path={routes.SIGN_IN} component={SignInPage} />
           <Route path={routes.PASSWORD_FORGET} component={PasswordForgetPage} />
           <Route path={routes.HOME} component={HomePage} />
+          <Route path={routes.ABOUT} component={AboutPage} />
           <Route path={routes.ACCOUNT} component={AccountPage} />
           <Route component={NotFoundPage} />
         </Switch>

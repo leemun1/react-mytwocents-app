@@ -32,7 +32,7 @@ const NavigationNotAuth = () =>
     <Link className="Navigation__item Navigation__item--brand" to={routes.LANDING}>
       <i className="fas fa-quote-left"></i> myTwoCents
     </Link>
-    <div className="Navigation__item">Hello, Anonymous.</div>
+    <div className="Navigation__greeting">Hello, Anonymous.</div>
     <Link
       className="Navigation__item Navigation__item--action--signin"
       to={routes.SIGN_IN}

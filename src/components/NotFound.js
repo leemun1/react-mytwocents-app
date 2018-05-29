@@ -10,7 +10,7 @@ const NotFoundPage = ({ history }) =>
       Please check if you have the right URL.
     </p>
     <button 
-      className="Button Button--goback" 
+      className="Button" 
       onClick={() => history.goBack()}
     >
       Go Back

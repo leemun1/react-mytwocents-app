@@ -69,7 +69,7 @@ class SignInForm extends Component {
           placeholder="Password"
         />
         {error && <p className="Form__error">{error.message}</p>}
-        <button className="Button Button--signin" disabled={isInvalid} type="submit">
+        <button className="Button" disabled={isInvalid} type="submit">
           Sign In
         </button>
       </form>
