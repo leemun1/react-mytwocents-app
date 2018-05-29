@@ -1,0 +1,22 @@
+.Button {
+  border: 1px solid $matt-grey;
+  border-radius: 3px;
+  background: none;
+  cursor: pointer;
+}
+
+.Button--signin,
+.Button--signup {
+  @extend .Button;
+  height: 4.5rem;
+  width: 10rem;
+  font-size: 2rem;
+  padding: 0.3rem 1rem;
+  margin: 1.5rem 0;
+  transition: all 0.3s ease;
+
+  &:disabled {
+    border-color: $faint-grey;
+    color: $faint-grey;
+  }
+}

@@ -8,8 +8,8 @@ import { auth } from '../firebase';
 import * as routes from '../constants/routes';
 
 const SignUpPage = ({ history }) =>
-  <div>
-    <h1>SignUpPage</h1>
+  <div className="Section">
+    <h1>Join The Crew!</h1>
     <SignUpForm history={history}/>
   </div>
 
@@ -68,42 +68,46 @@ class SignUpForm extends Component {
       username === '';
 
     return (
-      <form onSubmit={this.onSubmit}>
+      <form className="Form" onSubmit={this.onSubmit}>
         <input
+          className="Form__input"
           value={username}
           onChange={event => this.setState(byPropKey('username', event.target.value))}
           type="text"
           placeholder="Username"
         />
         <input
+          className="Form__input"
           value={email}
           onChange={event => this.setState(byPropKey('email', event.target.value))}
           type="text"
           placeholder="Email Address"
         />
         <input
+          className="Form__input"      
           value={passwordOne}
           onChange={event => this.setState(byPropKey('passwordOne', event.target.value))}
           type="password"
           placeholder="Password"
         />
         <input
+          className="Form__input"
           value={passwordTwo}
           onChange={event => this.setState(byPropKey('passwordTwo', event.target.value))}
           type="password"
           placeholder="Confirm Password"
         />
-        <button disabled={isInvalid} type="submit">
+        <button className="Button Button--signup" disabled={isInvalid} type="submit">
           Sign Up
         </button>
-        {error && <p>{error.message}</p>}
+        {error && <p className="Form__error">{error.message}</p>}
       </form>
     );
   }
 }
 
 const SignUpLink = () =>
-  <p>
+  <p className="Form__link">
     Don't have an account yet?
     {' '}
     <Link to={routes.SIGN_UP}>Sign Up</Link>

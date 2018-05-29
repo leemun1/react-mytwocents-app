@@ -1,26 +1,7 @@
-*,
-*::after {
-  margin: 0;
-  padding: 0;
-}
-
-.App {
-  width: 45rem;
-  margin: 0 auto;
-  border: 1px solid red;
-}
-
-.Navigation {
-  background: rgb(214, 214, 214);
-
-  ul {
-    display: flex;
-    list-style: none;
-
-    li, a {
-      color: red;
-      text-decoration: none;
-      margin-left: 10px;
-    }
-  }
-}
+@import './base/settings';
+@import './base/base';
+@import './layout/App';
+@import './layout/Navigation';
+@import './layout/Section';
+@import './components/Form';
+@import './components/Button';

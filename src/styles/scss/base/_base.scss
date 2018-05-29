@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css?family=Dosis:300,500,700');
+
+*,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Dosis', sans-serif;
+  color: $matt-grey;
+}
+
+html {
+  font-size: 62.5%;
+}

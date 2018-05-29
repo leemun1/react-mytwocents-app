@@ -7,8 +7,8 @@ import { auth } from '../firebase';
 import * as routes from '../constants/routes';
 
 const SignInPage = ({ history }) =>
-  <div>
-    <h1>SignIn</h1>
+  <div className="Section">
+    <h1>Welcome Back!</h1>
     <SignInForm history={history} />
     <PasswordForgetLink />
     <SignUpLink />
@@ -53,23 +53,25 @@ class SignInForm extends Component {
       email === '';
 
     return (
-      <form onSubmit={this.onSubmit}>
+      <form className="Form" onSubmit={this.onSubmit}>
+        {error && <p className="Form__error">{error.message}</p>}
         <input
+          className="Form__input"
           value={email}
           onChange={e => this.setState({ 'email': e.target.value })}
           type="text"
           placeholder="Email Address"
         />
         <input
+          className="Form__input"
           value={password}
-          onChange={e => this.setState({'password': e.target.value})}
+          onChange={e => this.setState({ 'password': e.target.value })}
           type="password"
           placeholder="Password"
         />
-        <button disabled={isInvalid} type="submit">
+        <button className="Button Button--signin" disabled={isInvalid} type="submit">
           Sign In
         </button>
-        {error && <p>{error.message}</p>}
       </form>
     );
   }

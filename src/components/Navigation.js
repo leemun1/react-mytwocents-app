@@ -15,21 +15,36 @@ const Navigation = ({ authUser }) =>
 
 const NavigationAuth = ({ user }) =>
   <div className="Navigation">
-    <ul>
-      <li><Link to={routes.LANDING}>Landing</Link></li>
-      <li><Link to={routes.HOME}>Home</Link></li>
-      <li><Link to={routes.ACCOUNT}>Account</Link></li>
-      <li><SignOutButton /></li>
-    </ul>
+    <Link className="Navigation__item Navigation__item--brand" to={routes.LANDING}>
+      <i class="fas fa-quote-left"></i> myTwoCents
+    </Link>
+    <Link className="Navigation__item" to={routes.HOME}>
+      <div>Home</div>
+    </Link>
+    <Link className="Navigation__item" to={routes.ACCOUNT}>
+      <div>Account</div>
+    </Link>
+    <div className="Navigation__item"><SignOutButton /></div>
   </div>
 
 const NavigationNotAuth = () =>
   <div className="Navigation">
-    <ul>
-      <li><Link to={routes.LANDING}>Landing</Link></li>
-      <li><Link to={routes.SIGN_IN}>Sign In</Link></li>
-      <li>Hello, Anonymous</li>
-    </ul>
+    <Link className="Navigation__item Navigation__item--brand" to={routes.LANDING}>
+      <i class="fas fa-quote-left"></i> myTwoCents
+    </Link>
+    <div className="Navigation__item">Hello, Anonymous.</div>
+    <Link 
+      className="Navigation__item Navigation__item--action--signin" 
+      to={routes.SIGN_IN}
+    >
+      Sign In
+    </Link>
+    <Link 
+      className="Navigation__item Navigation__item--action--signup" 
+      to={routes.SIGN_UP}
+    >
+      Sign Up
+    </Link>
   </div>
 
 export default Navigation;
