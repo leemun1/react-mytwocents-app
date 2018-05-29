@@ -16,7 +16,6 @@ const withAuth = (Component) => {
     }
 
     render() {
-      console.log(process.env);
       return (
         <Component />
       );
