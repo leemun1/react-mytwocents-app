@@ -15,6 +15,7 @@ import HomePage from './Home';
 import AboutPage from './About';
 import AccountPage from './Account';
 import NotFoundPage from './NotFound';
+import Footer from './Footer';
 
 import * as routes from '../constants/routes';
 
@@ -32,6 +33,7 @@ const App = () =>
           <Route path={routes.ACCOUNT} component={AccountPage} />
           <Route component={NotFoundPage} />
         </Switch>
+      <Footer />
     </div>
   </Router>
 
