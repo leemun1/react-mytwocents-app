@@ -3,6 +3,9 @@
 # dependencies
 /node_modules
 
+# css build
+/src/styles/css
+
 # env vars
 .env
 
