@@ -20,7 +20,7 @@ class HomePage extends Component {
 
     console.log(users);
     return (
-      <div className="Main">
+      <div className="Content">
         <h1>HomePage</h1>
         <p>The Home Page is accessible by every signed in user.</p>
 

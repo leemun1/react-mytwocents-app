@@ -10,14 +10,6 @@
 html {
   font-size: 62.5%; }
 
-.Main {
-  border: 1px dashed red;
-  display: flex;
-  min-height: 90vh;
-  flex-direction: column;
-  font-size: 1.5rem;
-  padding: 2rem; }
-
 .App {
   max-width: 90rem;
   min-height: 98vh;
@@ -62,6 +54,14 @@ html {
     border-left: none;
     border-top-right-radius: 3px;
     border-bottom-right-radius: 3px; }
+
+.Content {
+  border: 1px dashed red;
+  display: flex;
+  min-height: 90vh;
+  flex-direction: column;
+  font-size: 1.5rem;
+  padding: 2rem; }
 
 .Section {
   display: flex;
