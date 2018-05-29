@@ -4,7 +4,7 @@ import {
   Link,
  } from 'react-router-dom';
 
-import { auth } from '../firebase';
+import { auth, db } from '../firebase';
 import * as routes from '../constants/routes';
 
 const SignUpPage = ({ history }) =>
@@ -21,10 +21,6 @@ const INITIAL_STATE = {
   error: null,
 };
 
-const byPropKey = (propertyName, value) => () => ({
-  [propertyName]: value,
-})
-
 class SignUpForm extends Component {
   state = {
     ...INITIAL_STATE
@@ -32,6 +28,7 @@ class SignUpForm extends Component {
 
   onSubmit = (e) => {
     const {
+      username,
       email,
       passwordOne,
     } = this.state;
@@ -42,8 +39,17 @@ class SignUpForm extends Component {
 
     auth.doCreateUserWithEmailAndPassword(email, passwordOne)
       .then(authUser => {
-        this.setState({...INITIAL_STATE});
-        history.push(routes.HOME);
+        console.log('authUser', authUser);
+        db.doCreateUser(authUser.user.uid, username, email)
+          .then(() => {
+            console.log('added user to db');
+            this.setState({...INITIAL_STATE});
+            history.push(routes.HOME);
+          })
+          .catch(error => {
+            this.setState({ error });
+          });
+
       })
       .catch(error => {
         this.setState({ error });
@@ -72,28 +78,28 @@ class SignUpForm extends Component {
         <input
           className="Form__input"
           value={username}
-          onChange={event => this.setState(byPropKey('username', event.target.value))}
+          onChange={e => this.setState({'username': e.target.value})}
           type="text"
           placeholder="Username"
         />
         <input
           className="Form__input"
           value={email}
-          onChange={event => this.setState(byPropKey('email', event.target.value))}
+          onChange={e => this.setState({'email': e.target.value})}
           type="text"
           placeholder="Email Address"
         />
         <input
           className="Form__input"      
           value={passwordOne}
-          onChange={event => this.setState(byPropKey('passwordOne', event.target.value))}
+          onChange={e => this.setState({'passwordOne': e.target.value})}
           type="password"
           placeholder="Password"
         />
         <input
           className="Form__input"
           value={passwordTwo}
-          onChange={event => this.setState(byPropKey('passwordTwo', event.target.value))}
+          onChange={e => this.setState({'passwordTwo': e.target.value})}
           type="password"
           placeholder="Confirm Password"
         />
