@@ -9,7 +9,7 @@ import * as routes from '../constants/routes';
 
 const SignUpPage = ({ history }) =>
   <div className="Section">
-    <h1>Join The Crew!</h1>
+    <h1 className="Section__title">Join The Crew!</h1>
     <SignUpForm history={history}/>
   </div>
 

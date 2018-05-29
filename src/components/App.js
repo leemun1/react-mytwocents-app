@@ -2,6 +2,7 @@ import React from 'react';
 import {
   BrowserRouter as Router,
   Route,
+  Switch,
 } from 'react-router-dom';
 
 import withAuth from './withAuth';
@@ -12,6 +13,7 @@ import SignInPage from './SignIn';
 import PasswordForgetPage from './PasswordForget';
 import HomePage from './Home';
 import AccountPage from './Account';
+import NotFoundPage from './NotFound';
 
 import * as routes from '../constants/routes';
 
@@ -19,12 +21,15 @@ const App = () =>
   <Router>
     <div className="App">
       <Navigation />
-      <Route exact path={routes.LANDING} component={LandingPage} />
-      <Route exact path={routes.SIGN_UP} component={SignUpPage} />
-      <Route exact path={routes.SIGN_IN} component={SignInPage} />
-      <Route exact path={routes.PASSWORD_FORGET} component={PasswordForgetPage} />
-      <Route exact path={routes.HOME} component={HomePage} />
-      <Route exact path={routes.ACCOUNT} component={AccountPage} />
+        <Switch>
+          <Route exact path={routes.LANDING} component={LandingPage} />
+          <Route path={routes.SIGN_UP} component={SignUpPage} />
+          <Route path={routes.SIGN_IN} component={SignInPage} />
+          <Route path={routes.PASSWORD_FORGET} component={PasswordForgetPage} />
+          <Route path={routes.HOME} component={HomePage} />
+          <Route path={routes.ACCOUNT} component={AccountPage} />
+          <Route component={NotFoundPage} />
+        </Switch>
     </div>
   </Router>
 

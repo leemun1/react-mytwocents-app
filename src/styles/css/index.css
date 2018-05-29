@@ -71,11 +71,29 @@ html {
   justify-content: center;
   font-size: 1.5rem;
   padding: 2rem; }
+  .Section__title {
+    font-size: 4.5rem;
+    margin-bottom: 1rem; }
   .Section__description {
     width: 35rem;
     text-align: center;
     margin: 1.6rem 0;
     font-size: 1.8rem; }
+
+.NotFound__title {
+  font-size: 15rem;
+  font-weight: 300; }
+
+.NotFound__url {
+  font-size: 3rem;
+  margin: 1.5rem 0;
+  background: rgba(184, 22, 22, 0.61);
+  padding: 0.6rem;
+  color: white; }
+
+.NotFound__description {
+  font-size: 3rem;
+  margin: 2rem 0; }
 
 .Form {
   display: flex;
@@ -105,7 +123,8 @@ html {
 .Button, .Button--signin,
 .Button--signup,
 .Button--passwordReset,
-.Button--passwordChange {
+.Button--passwordChange,
+.Button--goback {
   border: 1px solid #555;
   border-radius: 3px;
   background: none;
@@ -115,7 +134,8 @@ html {
 .Button--signin,
 .Button--signup,
 .Button--passwordReset,
-.Button--passwordChange {
+.Button--passwordChange,
+.Button--goback {
   height: 4.5rem;
   min-width: 10rem;
   font-size: 2rem;
@@ -125,13 +145,15 @@ html {
   .Button--signin:not([disabled]):hover,
   .Button--signup:not([disabled]):hover,
   .Button--passwordReset:not([disabled]):hover,
-  .Button--passwordChange:not([disabled]):hover {
+  .Button--passwordChange:not([disabled]):hover,
+  .Button--goback:not([disabled]):hover {
     background: #555;
     color: white; }
   .Button--signin:disabled,
   .Button--signup:disabled,
   .Button--passwordReset:disabled,
-  .Button--passwordChange:disabled {
+  .Button--passwordChange:disabled,
+  .Button--goback:disabled {
     border-color: #e4e4e4;
     color: #e4e4e4;
     cursor: default; }

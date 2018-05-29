@@ -8,7 +8,7 @@ import * as routes from '../constants/routes';
 
 const SignInPage = ({ history }) =>
   <div className="Section">
-    <h1>Welcome Back!</h1>
+    <h1 className="Section__title">Welcome Back!</h1>
     <SignInForm history={history} />
     <PasswordForgetLink />
     <SignUpLink />

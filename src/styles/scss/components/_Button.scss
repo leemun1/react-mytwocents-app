@@ -9,7 +9,8 @@
 .Button--signin,
 .Button--signup,
 .Button--passwordReset,
-.Button--passwordChange {
+.Button--passwordChange,
+.Button--goback {
   @extend .Button;
   height: 4.5rem;
   min-width: 10rem;
