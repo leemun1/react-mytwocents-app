@@ -15,7 +15,7 @@ const Navigation = ({ authUser }) =>
 
 const NavigationAuth = () =>
   <div className="Navigation">
-    <Link className="Navigation__item Navigation__item--brand" to={routes.LANDING}>
+    <Link className="Navigation__item--brand" to={routes.LANDING}>
       <i className="fas fa-quote-left"></i> myTwoCents
     </Link>
     <Link className="Navigation__item" to={routes.ABOUT}>
@@ -25,7 +25,7 @@ const NavigationAuth = () =>
       <div>Browse</div>
     </Link>
     <Link 
-      className="Navigation__item Navigation__item--account" 
+      className="Navigation__item--account" 
       to={routes.ACCOUNT}
     >
       <div>Account</div>
@@ -35,7 +35,7 @@ const NavigationAuth = () =>
 
 const NavigationNotAuth = () =>
   <div className="Navigation">
-    <Link className="Navigation__item Navigation__item--brand" to={routes.LANDING}>
+    <Link className="Navigation__item--brand" to={routes.LANDING}>
       <i className="fas fa-quote-left"></i> myTwoCents
     </Link>
     <Link className="Navigation__item" to={routes.ABOUT}>
@@ -45,13 +45,13 @@ const NavigationNotAuth = () =>
       <div>Browse</div>
     </Link>
     <Link
-      className="Navigation__item Navigation__item--action--signin"
+      className="Navigation__item--action--signin"
       to={routes.SIGN_IN}
     >
       Sign In
     </Link>
     <Link
-      className="Navigation__item Navigation__item--action--signup"
+      className="Navigation__item--action--signup"
       to={routes.SIGN_UP}
     >
       Sign Up

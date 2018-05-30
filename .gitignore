@@ -4,7 +4,7 @@
 /node_modules
 
 # css build
-/src/styles/css
+/src/**/*.css
 
 # env vars
 .env
