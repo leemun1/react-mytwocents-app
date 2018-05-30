@@ -1,6 +1,9 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 
-const AboutPage = () =>
+import * as routes from '../constants/routes';
+
+const AboutPage = ({ history }) =>
   <div className="Section">
     <h1 className="About__title">
       Hi there!
@@ -14,9 +17,9 @@ const AboutPage = () =>
     <div className="About__description">
       To get started, let's check out the list of <strong>Jars</strong>.
     </div>
-    <button className="Button">
+    <button className="Button" onClick={() => history.push(routes.BROWSE)}>
       Go!
     </button>
   </div>
 
-export default AboutPage;
+export default withRouter(AboutPage);
