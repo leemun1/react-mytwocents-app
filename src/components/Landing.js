@@ -16,11 +16,10 @@ class LandingPage extends Component {
 
   render() {
     const { authUser, jars } = this.props;
-    console.log(jars);
     return (
       <div className="Content">
         <GreetingBox authUser={authUser} />
-        {jars && <JarList jars={jars} />}
+        {jars && <JarList jars={jars}>Trending Now</JarList>}
       </div>
     )
   }
