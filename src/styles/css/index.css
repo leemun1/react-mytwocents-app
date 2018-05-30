@@ -16,7 +16,8 @@ a {
 .App {
   max-width: 110rem;
   min-height: 99vh;
-  margin: 0 auto; }
+  margin: 0 auto;
+  overflow: hidden; }
 
 .Navigation {
   background: transparent;
@@ -184,6 +185,16 @@ a {
   width: 50%;
   margin-bottom: 2rem; }
 
+.FormPage {
+  max-width: 90rem;
+  margin: 0 auto;
+  align-items: center; }
+  .FormPage .Form {
+    width: 100%; }
+  .FormPage__heading {
+    font-size: 3rem;
+    margin: 1.5rem; }
+
 .Form {
   display: flex;
   flex-direction: column;
@@ -208,6 +219,8 @@ a {
   .Form__link {
     font-size: 1.8rem;
     margin: 0.2rem 0; }
+  .Form textarea {
+    min-height: 25rem; }
 
 .Button {
   border: 1px solid #555;
