@@ -6,15 +6,19 @@ export const doCreateUser = (id, username, email) =>
     email,
   });
 
-
 export const onceGetUsers = () =>
   db.ref('users').once('value');
 
+export const onceGetUsernameById = (uid) =>
+  db.ref(`users/${uid}/username`).once('value');
 
-export const doCreateJar = (uid, title) =>
+export const doCreateJar = (uid, title, content, createdAt, likes) =>
   db.ref(`jars`).push({
-    openBy: uid,
-    title
+    uid,
+    title,
+    content,
+    createdAt,
+    likes,
   });
 
 export const onceGetJars = () =>

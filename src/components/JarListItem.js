@@ -1,21 +1,40 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import moment from 'moment';
 
 import * as routes from '../constants/routes';
+import { db } from '../firebase';
 
-const JarListItem = ({ jar }) =>
-  <Link to={routes.LANDING}>
-    <div className="JarList__item">
-      <div className="JarList__item--title">{jar.title}</div>
-      <div className="JarList__item--username">@Username</div>
-      <div className="JarList__item--meta">
-        <span>23 minutes ago</span>
-        <span>{`\u2022`}</span>
-        <span>23 likes</span>
-        <span>{`\u2022`}</span>
-        <span>13 comments</span>      
-      </div>
-    </div>
-  </Link>
+class JarListItem extends Component {
+  state = {
+    username: '',
+  }
+
+  componentDidMount() {
+    db.onceGetUsernameById(this.props.jar.uid).then(snapshot =>
+      this.setState({ username: snapshot.val() })
+    );
+  }
+
+  render() {
+    const {username} = this.state;
+    const { title, likes, createdAt } = this.props.jar;
+    const timeFromNow = moment(createdAt).fromNow();
+
+    return (
+      <Link to={routes.LANDING}>
+        <div className="JarList__item">
+          <div className="JarList__item--title">{title}</div>
+          <div className="JarList__item--username">@{username}</div>
+          <div className="JarList__item--meta">
+            <span>{timeFromNow}</span>
+            <span>{`\u2022`}</span>
+            <span>{likes} likes</span>
+          </div>
+        </div>
+      </Link>
+    )
+  }
+}
 
 export default JarListItem;
