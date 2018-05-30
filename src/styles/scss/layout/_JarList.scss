@@ -1,0 +1,51 @@
+.JarList__container {
+  border: 1px solid $faint-grey;
+  flex: 1;
+}
+
+.JarList__header {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background: lighten($faint-grey, 5%);
+}
+
+.JarList__header__title {
+  flex: 1;
+}
+
+.JarList__header__controls {
+  display: inline-block;
+}
+
+.JarList__header__filter {
+  margin-left: 1rem;
+}
+
+.JarList__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-top: 1px solid $faint-grey;
+  height: 10rem;
+  padding: 0.5rem 1rem;
+
+  &--title {
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+
+  &--username {
+    font-size: 1.6rem;
+  }
+
+  &--meta {
+    display: flex;
+    justify-content: flex-end;
+
+    span {
+      margin: 0 0.5rem;
+    }
+  }
+}

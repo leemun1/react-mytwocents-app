@@ -7,11 +7,6 @@
   padding: 1rem;
 }
 
-.Navigation__greeting {
-  font-size: 2rem;
-  margin-right: 2rem;
-}
-
 .Navigation__item {
   color: $matt-grey;
   text-decoration: none;
@@ -24,6 +19,12 @@
   font-weight: 700;
   padding-bottom: 0.3rem;
   flex: 1;
+}
+
+.Navigation__item--account {
+  border-left : 1.5px solid;
+  padding-left: 2rem;
+  line-height: 1;
 }
 
 .Navigation__item--action {
@@ -42,20 +43,21 @@
   
   &--signout {
     @extend .Navigation__item--action;
-    border-radius: 3px;
+    border-radius: 1px;
   }
 
   &--signin {
     @extend .Navigation__item--action;
-    border-top-left-radius: 3px;
-    border-bottom-left-radius: 3px;
+    margin-left: 1.5rem;
+    border-top-left-radius: 1px;
+    border-bottom-left-radius: 1px;
   }
 
   &--signup {
     @extend .Navigation__item--action;
     border-left: none;
-    border-top-right-radius: 3px;
-    border-bottom-right-radius: 3px;
+    border-top-right-radius: 1px;
+    border-bottom-right-radius: 1px;
   }
 
 }
