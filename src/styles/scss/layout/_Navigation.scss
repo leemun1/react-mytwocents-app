@@ -28,12 +28,11 @@
 
 .Navigation__item--link {
   @extend .Navigation__item;
-  visibility: hidden;
-  margin: 0;
-  @media (min-width: 500px) {
-    font-size: 1.8rem;
-    visibility: visible;
-    margin: 0 0.5rem;
+  font-size: 1.8rem;
+  margin: 0 0.5rem;
+  @media (max-width: 500px) {
+    display: none;
+    margin: 0;
   }
 }
 
