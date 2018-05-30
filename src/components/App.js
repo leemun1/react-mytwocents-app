@@ -12,8 +12,10 @@ import SignUpPage from './SignUp';
 import SignInPage from './SignIn';
 import PasswordForgetPage from './PasswordForget';
 import HomePage from './Home';
+import BrowsePage from './Browse';
 import AboutPage from './About';
 import AccountPage from './Account';
+import CreateJarPage from './CreateJar';
 import NotFoundPage from './NotFound';
 import Footer from './Footer';
 
@@ -29,8 +31,10 @@ const App = () =>
           <Route path={routes.SIGN_IN} component={SignInPage} />
           <Route path={routes.PASSWORD_FORGET} component={PasswordForgetPage} />
           <Route path={routes.HOME} component={HomePage} />
+          <Route path={routes.BROWSE} component={BrowsePage} />
           <Route path={routes.ABOUT} component={AboutPage} />
           <Route path={routes.ACCOUNT} component={AccountPage} />
+          <Route path={routes.CREATE_JAR} component={CreateJarPage} />
           <Route component={NotFoundPage} />
         </Switch>
       <Footer />
