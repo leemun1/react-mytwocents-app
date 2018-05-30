@@ -10,13 +10,8 @@
 .Navigation__item {
   color: $matt-grey;
   text-decoration: none;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   margin: 0 0.5rem;
-
-  @media (min-width: 1150px) {
-    font-size: 2rem; 
-    margin: 0 1rem;
-  }
 }
 
 .Navigation__item--brand {
@@ -31,6 +26,17 @@
   }
 }
 
+.Navigation__item--link {
+  @extend .Navigation__item;
+  visibility: hidden;
+  margin: 0;
+  @media (min-width: 500px) {
+    font-size: 1.8rem;
+    visibility: visible;
+    margin: 0 0.5rem;
+  }
+}
+
 .Navigation__item--account {
   @extend .Navigation__item;
   border-left : 1.5px solid;
@@ -41,16 +47,12 @@
 .Navigation__item--action {
   @extend .Navigation__item;
   background: none;
+  font-size: 1.6rem;
   padding: 0.6rem 1rem;
-  font-size: 1.4rem;
   margin: 0;
   border: 1px solid $matt-grey;
   outline: none;
   transition: all 0.1s ease;
-
-  @media (min-width: 1150px) {
-  font-size: 1.6rem;
-  }
 
   &:hover {
     background: $matt-grey;

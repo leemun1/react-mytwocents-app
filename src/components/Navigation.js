@@ -18,10 +18,10 @@ const NavigationAuth = () =>
     <Link className="Navigation__item--brand" to={routes.LANDING}>
       <i className="fas fa-quote-left"></i> myTwoCents
     </Link>
-    <Link className="Navigation__item" to={routes.ABOUT}>
+    <Link className="Navigation__item--link" to={routes.ABOUT}>
       <div>About</div>
     </Link>
-    <Link className="Navigation__item" to={routes.BROWSE}>
+    <Link className="Navigation__item--link" to={routes.BROWSE}>
       <div>Browse</div>
     </Link>
     <Link 
@@ -38,10 +38,10 @@ const NavigationNotAuth = () =>
     <Link className="Navigation__item--brand" to={routes.LANDING}>
       <i className="fas fa-quote-left"></i> myTwoCents
     </Link>
-    <Link className="Navigation__item" to={routes.ABOUT}>
+    <Link className="Navigation__item--link" to={routes.ABOUT}>
       <div>About</div>
     </Link>
-    <Link className="Navigation__item" to={routes.BROWSE}>
+    <Link className="Navigation__item--link" to={routes.BROWSE}>
       <div>Browse</div>
     </Link>
     <Link
