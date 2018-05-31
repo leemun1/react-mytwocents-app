@@ -11,18 +11,19 @@ class JarListItem extends Component {
   }
 
   componentDidMount() {
-    db.onceGetUsernameById(this.props.jar.uid).then(snapshot =>
+    db.onceGetUsernameById(this.props.jar.uid).then(snapshot => 
       this.setState({ username: snapshot.val() })
     );
   }
 
   render() {
     const {username} = this.state;
+    const { id } = this.props;
     const { title, likes, createdAt } = this.props.jar;
     const timeFromNow = moment(createdAt).fromNow();
 
     return (
-      <Link to={routes.LANDING}>
+      <Link to={`/view/${id}`}>
         <div className="JarList__item">
           <div className="JarList__item--title">{title}</div>
           <div className="JarList__item--username">@{username}</div>

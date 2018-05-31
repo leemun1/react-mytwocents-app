@@ -72,8 +72,8 @@ const mapStateToProps = (state) => ({
 });
 
 const CreateJarPage = ({ authUser, history }) =>
-  <div className="FormPage">
-    <h1 className="FormPage__heading">Create a New Jar</h1>
+  <div className="Content">
+    <h1 className="Form__heading">Create a New Jar</h1>
     <CreateJarForm user={authUser} history={history}/>
   </div>
 

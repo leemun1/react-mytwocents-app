@@ -16,6 +16,7 @@ import BrowsePage from './Browse';
 import AboutPage from './About';
 import AccountPage from './Account';
 import CreateJarPage from './CreateJar';
+import ViewJarPage from './ViewJar';
 import NotFoundPage from './NotFound';
 import Footer from './Footer';
 
@@ -35,6 +36,7 @@ const App = () =>
           <Route path={routes.ABOUT} component={AboutPage} />
           <Route path={routes.ACCOUNT} component={AccountPage} />
           <Route path={routes.CREATE_JAR} component={CreateJarPage} />
+          <Route path='/view/:id' component={ViewJarPage} />          
           <Route component={NotFoundPage} />
         </Switch>
       <Footer />

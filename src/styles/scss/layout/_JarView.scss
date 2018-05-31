@@ -1,0 +1,57 @@
+.JarView {
+  margin: 0 auto;
+  padding: 2rem;
+
+  @media (min-width: 1150px) {
+    max-width: 70%;
+  }
+
+  &__title {
+    font-size: 4rem;
+    padding-bottom: 2rem;
+
+    span {
+      border-bottom: 2px solid $faint-grey;
+    }
+  }
+
+  &__infoSlot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+
+  &__meta {
+    height: 5rem;
+    flex: 1;
+
+    &--avatar {
+      height: 100%;
+      border-radius: 50%;
+      float: left;
+      margin-right: 1.5rem;
+    }
+
+    &--username,
+    &--createdAt {
+      height: 50%;
+      display: flex;
+      align-items: center;
+    }
+
+    &--username {
+      font-size: 2.5rem;
+      color: #333;
+    }
+  }
+
+  &__metric {
+    font-size: 1.8rem;
+  }
+
+  &__content {
+    font-size: 2rem;
+    line-height: 1.4;
+  }
+}

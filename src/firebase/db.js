@@ -23,3 +23,6 @@ export const doCreateJar = (uid, title, content, createdAt, likes) =>
 
 export const onceGetJars = () =>
   db.ref('jars').once('value');
+
+export const onceGetJarById = (id) =>
+  db.ref(`jars/${id}`).once('value');

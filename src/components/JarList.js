@@ -12,8 +12,8 @@ const JarList = ({ jars, children }) =>
       </div>
     </div>
     <div>
-      {Object.keys(jars).map(key =>
-        <JarListItem key={key} jar={jars[key]} />
+      {Object.keys(jars).map(key => 
+        <JarListItem key={key} id={key} jar={jars[key]} />
       )}
     </div>
   </div>

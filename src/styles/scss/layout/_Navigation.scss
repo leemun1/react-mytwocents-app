@@ -10,7 +10,7 @@
 .Navigation__item {
   color: $matt-grey;
   text-decoration: none;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   margin: 0 0.5rem;
 }
 
@@ -38,9 +38,11 @@
 
 .Navigation__item--account {
   @extend .Navigation__item;
-  border-left : 1.5px solid;
   padding-left: 2rem;
   line-height: 1;
+  @media (min-width: 500px) {
+    border-left : 1.5px solid;
+  }
 }
 
 .Navigation__item--action {

@@ -3,4 +3,7 @@
   min-height: 99vh;
   margin: 0 auto;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
